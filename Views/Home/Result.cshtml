@@ -1,0 +1,32 @@
+﻿@model PrimerParcial.Models.API
+
+@{
+    ViewData["Title"] = "Resultado";
+}
+
+<div>
+    <h4>@ViewData["Title"]</h4>
+
+    <div class="text-center justify-content-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Foto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.Cedula)</td>
+                    <td>@Html.DisplayFor(model => model.Nombres)</td>
+                    <td>@Html.DisplayFor(model => model.Apellido1)</td>
+                    <td>
+                        <img width="30" height="40" src=@Html.DisplayFor(model => model.Foto) alt="Foto" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
